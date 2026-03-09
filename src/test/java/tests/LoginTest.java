@@ -13,7 +13,6 @@ public class LoginTest extends BaseTest {
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginAs("tomsmith", "SuperSecretPassword!");
-        loginPage.clickLogin();
 
         String successMessage = loginPage.getFlashMessage();
         Assert.assertTrue(successMessage.contains("You logged into a secure area!"),
